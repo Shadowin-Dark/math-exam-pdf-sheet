@@ -2,7 +2,7 @@ import { Operation, Range } from '@lib/types/constants';
 import { Formula } from '@lib/types/exams';
 
 const randNum = (range: Range) => {
-  const r = parseInt(range, 10);
+  const r = parseInt(range, 10) - 1;
   return Math.floor(Math.random() * r) + 1;
 };
 

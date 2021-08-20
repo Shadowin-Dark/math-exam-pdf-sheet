@@ -9,9 +9,9 @@ const getOperator = (o: Operation) => {
     case Operation.sub:
       return '-';
     case Operation.mul:
-      return '✖️';
+      return 'X';
     case Operation.div:
-      return '➗';
+      return '/';
     default:
       return '?';
   }
