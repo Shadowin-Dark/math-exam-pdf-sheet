@@ -49,11 +49,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /\.modules\.css$/,
+        exclude: /\.module\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
-        test: /\.modules\.css$/,
+        test: /\.module\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -74,7 +74,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
+    alias: {
+      '@lib': path.resolve(__dirname, './src/lib/')
+    }
   },
   optimization: {
     moduleIds: 'hashed',
